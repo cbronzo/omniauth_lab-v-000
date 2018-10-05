@@ -9,10 +9,12 @@ class SessionsController < ApplicationController
      login!
     render 'welcome/home'
   end
-   def destroy
+  
+  def destroy
     session.clear
   end
-   def auth
+  
+  def auth
     request.env['omniauth.auth']
   end
   
